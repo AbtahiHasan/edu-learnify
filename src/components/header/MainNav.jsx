@@ -12,7 +12,7 @@ const MainNav = () => {
     const [toggle, setToggle] = useState(false)
     const navlinks = ["home", "about", "shop", "pages", "about us", "blog", "contact"]
     return (
-        <section className='py-6 bg-white relative z-50'>
+        <section className='py-3 bg-white z-[9999] sticky -top-1'>
             <div className='ui-container flex items-center justify-between relative'>
                 {/* logo  */}
                 <div className='flex gap-2 items-center'>
@@ -20,7 +20,7 @@ const MainNav = () => {
                     <h2 className='text-2xl font-bold'>Edu-Learnify</h2>
                 </div>
                
-                <ul className={`md:flex absolute transition-all md:static w-full md:w-auto gap-4 top-16 bg-black md:bg-transparent text-white md:text-black items-center ${toggle ? "left-0": "-left-full"} `}>
+                <ul className={`md:flex absolute transition-all md:static w-full md:w-auto gap-4 top-[50px] bg-black md:bg-transparent text-white md:text-black items-center ${toggle ? "left-0": "-left-full"} `}>
                     {
                         navlinks.map((name, index) => <li className='p-3 text-center' key={index}><NavLink>{name.toUpperCase()}</NavLink></li>)
                     }                  
@@ -29,7 +29,7 @@ const MainNav = () => {
                     <button><AiOutlineShoppingCart className='font-bold text-xl mr-2'/></button>
                     <button><AiOutlineSearch className='font-bold text-xl mr-2'/></button>
                 </div>
-                <div className='md:hidden'>
+                <div className='md:hidden cursor-pointer'>
                 {
                     toggle ? <MdClose className='text-xl' onClick={() => setToggle(!toggle)}/> : <HiMenuAlt2 className='text-xl' onClick={() => setToggle(!toggle)}/>
                 }

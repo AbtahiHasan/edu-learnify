@@ -4,10 +4,11 @@ import MainNav from './header/MainNav';
 
 const Header = () => {
     return (
-        <nav>
+        <>
             <TopNav/>
             <MainNav/>
-        </nav>
+
+        </>
     );
 };
 
