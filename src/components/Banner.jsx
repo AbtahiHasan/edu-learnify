@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import BannerCard from './banner/BannerCard';
 
 const Banner = () => {
     return (
@@ -12,10 +13,9 @@ const Banner = () => {
                         <button className="btn-about"><Link>About Us</Link></button>
                         <button className="btn-contact"><Link>Contact Us</Link></button>
                     </div>
-                </div>              
-                
-            </div>
-            
+                </div>            
+            </div>       
+            <BannerCard/>
         </section>
     );
 };
