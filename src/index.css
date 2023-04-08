@@ -5,3 +5,9 @@
 .ui-container {
     @apply max-w-[1240px] mx-auto px-3
 }
+.btn-about {
+    @apply py-3 px-6 rounded-full bg-green-600 hover:bg-white hover:text-black
+}
+.btn-contact {
+    @apply py-3 px-6 rounded-full bg-white hover:bg-green-600 hover:text-white text-black
+}
